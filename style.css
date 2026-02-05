@@ -1,0 +1,502 @@
+ /* CSS Variables based on the dark theme in the original file */
+ :root {
+     --bg-color: #141311;
+     --text-color: #f7f7f4;
+     --accent-color: #3d3d3d;
+     --button-bg: #f7f7f4;
+     --button-text: #0b0a07;
+     --muted-text: #8c8c8c;
+ }
+/* 
+ * {
+     border: 2px solid red;
+ } */
+
+ body {
+     margin: 0;
+     padding: 0;
+     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+     background-color: var(--bg-color);
+     color: var(--text-color);
+     line-height: 1.6;
+     text-rendering: optimizeLegibility;
+
+ }
+
+ /* Navigation */
+ nav {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 16px 40px;
+     background: #141311;
+     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+
+ }
+
+ .logo img {
+     height: 18px;
+     width: auto;
+     display: block;
+     background-color: var(--button-bg);
+     padding: 6px 10px;
+     border-radius: 10px;
+     margin-left: 50px;
+ }
+
+ .nav-links a {
+     color: #a1a1a1;
+     text-decoration: none;
+     margin: 0 15px;
+     font-size: 0.9rem;
+     font-weight: 500;
+ }
+
+ .button {
+     display: flex;
+     gap: 12px;
+     margin-right: 50px;
+ }
+
+ button {
+     padding: 6px 16px;
+     border-radius: 15px;
+     border: none;
+     cursor: pointer;
+     font-weight: 600;
+ }
+
+ .button .btn-1 {
+     background-color: #0b0a07;
+     color: var(--text-color);
+     border: 1px solid gray;
+ }
+
+ /* Hero Section */
+ .hero-container {
+     background-color: #141311;
+     padding: 120px 20px 60px;
+     display: flex;
+     justify-content: center;
+     text-align: left;
+     color: white;
+     margin: 10px;
+ }
+
+ .hero-content {
+     max-width: 1350px;
+     width: 100%;
+ }
+
+ /* Typography Fix: Matching the Cursor Heading */
+ .hero-title {
+     /* font-size: clamp(2rem, 5vw, 4.5rem); 
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    margin-bottom: 32px;
+     */
+
+ }
+
+ /* Button & CTA */
+ .btn-download {
+     background: #ffffff;
+     color: #000;
+     padding: 14px 28px;
+     font-size: 1rem;
+     text-decoration: none;
+     border-radius: 20px;
+     border: 1px solid rgba(255, 255, 255, 0.2);
+     cursor: pointer;
+     transition: transform 0.2s, background 0.2s;
+ }
+
+ .btn-download:hover {
+     background: #e5e5e5;
+     transform: translateY(-2px);
+ }
+
+ /* Image & "Floating" Effect */
+ .image-wrapper {
+     position: relative;
+     margin-top: 50px;
+     padding: 10px;
+ }
+
+ .hero-image {
+     width: 100%;
+     border-radius: 12px;
+     border: 1px solid rgba(255, 255, 255, 0.1);
+     box-shadow: 0 30px 100px rgba(0, 0, 0, 0.8);
+     background: #000;
+ }
+
+ /* next section*/
+ .marquee-wrapper {
+     background: #141311;
+     padding: 10px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 10px;
+     /* Space between text and logos */
+ }
+
+ .marquee-container {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     overflow: hidden;
+     /* Hides the items outside the screen */
+     background: #141311;
+     padding: 10px 0;
+     position: relative;
+ }
+
+ .marquee-title {
+     color: #a1a1a1;
+     font-size: 0.95rem;
+     font-weight: 400;
+     /* Keeping it light as requested */
+     text-align: center;
+ }
+
+ .marquee-track {
+     display: flex;
+     width: max-content;
+     gap: 20px;
+     animation: scroll 30s linear infinite;
+ }
+
+ .square-item {
+     flex-shrink: 0;
+     /* Prevents the squares from shrinking */
+     width: 150px;
+     /* Set your preferred size */
+     height: 120px;
+     background: #141311;
+     border: 1px solid rgba(255, 255, 255, 0.05);
+     border-radius: 12px;
+     overflow: hidden;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .square-item img {
+     width: 50%px;
+     height: 50px;
+     object-fit: cover;
+     filter: grayscale(1);
+     opacity: 0.6;
+     transition: 0.3s;
+ }
+
+ .square-item:hover img {
+     opacity: 1;
+     filter: grayscale(0);
+ }
+
+ .second-content {
+     background-color: #141311;
+     padding: 120px 20px 60px;
+     display: flex;
+     justify-content: center;
+     text-align: left;
+     color: white;
+     margin: 10px;
+ }
+
+ .content-section {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 60px;
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 60px 0;
+ }
+ 
+ /**/
+
+ .content-section {
+    display: flex;
+    background-color: #141311;
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 80px; /* Increased gap for a cleaner look */
+    max-width: 1350px;
+    margin: 40px auto;
+    padding: 80px 20px;
+    /* border: 1px solid red;  Removed for clean look */
+}
+
+/* Left Side: Text */
+.text-wrapper {
+    flex: 1; /* Takes up 40% of the space */
+}
+
+.text-wrapper p {
+    font-size: 1.5rem; /* Made larger to match the 'Agent' section style */
+    color: #fff;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+.text-wrapper p span {
+    color: #a1a1a1;
+    font-size: 2.5rem;
+    display: block;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+.text-wrapper .minitext{
+    color: red;
+    font-size: 1rem;
+}
+
+/* Right Side: Image Wrapper */
+.image-wrapper-01 {
+    flex: 1.6; /* Takes up 60% of the space - makes it "Big Enough" */
+    display: flex;
+    justify-content: center; 
+    position: relative;
+}
+
+.image-wrapper-01 img {
+    width: 100%; /* Fill the 1.6 flex container */
+    height: auto; /* Maintain aspect ratio (don't force 500px) */
+    max-width: 900px; /* Limits it so it doesn't get ridiculously huge */
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    /* Adds the "Thinking" depth effect */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+/* Optional: Add the subtle glow behind the big image */
+.image-wrapper-01::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+    z-index: -1;
+    filter: blur(40px);
+}
+
+.testimonial {
+    max-width: 1350px;
+    margin: 100px auto;
+    padding: 0 20px;
+    background-color: var(--bg-color);
+}
+
+.testimonial-header h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 60px;
+    letter-spacing: -0.02em;
+}
+
+/* Masonry Grid Layout */
+.card-grid {
+    column-count: 3; /* Creates 3 columns like the website */
+    column-gap: 20px;
+}
+
+.card {
+    break-inside: avoid; /* Prevents cards from splitting between columns */
+    background: #0c0c0c;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border-color 0.3s ease;
+}
+
+.card:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.card p {
+    color: #ededed;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    font-weight: 400;
+}
+
+/* Footer alignment for Name & Logo */
+.card-footer {
+    display: flex;
+    justify-content: flex-start;
+    gap: 3;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 16px;
+}
+
+.author-name {
+    color: #888;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.company-logo {
+    height: 40px; 
+    width: auto;
+    border-radius: 6px;
+   
+}
+
+
+.download-section {
+    background-color: #050505; /* Deep black background */
+    padding: 120px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.download-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px; /* Space between heading and button */
+}
+
+.download-section h2 {
+    font-size: clamp(3rem, 8vw, 5rem); /* Very big text size */
+    font-weight: 400; /* Keeping it light as requested */
+    color: #fff;
+    margin: 0;
+    letter-spacing: -0.03em;
+    line-height: 1;
+}
+
+.btn-final-download {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 18px 40px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 30px; /* Pill-shaped button */
+    transition: transform 0.2s, background-color 0.2s;
+    font-weight: 400;
+    display: inline-block;
+}
+
+.btn-final-download:hover {
+    background-color: #e5e5e5;
+    transform: scale(1.05); /* Subtle grow effect on hover */
+}
+
+.download-meta {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: -10px; /* Pull closer to the button */
+}
+
+.cursor-footer {
+    background-color: var(--bg-color);
+    color: #888;
+    padding: 80px 20px 40px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* 1. Grid Layout for Columns */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.footer-col h4 {
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 400; /* No Bold */
+    margin-bottom: 20px;
+}
+
+.footer-col a {
+    display: block;
+    color: #888;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    font-weight: 400; /* No Bold */
+    transition: color 0.2s;
+}
+
+.footer-col a:hover {
+    color: #fff;
+}
+
+.footer-col a span {
+    font-size: 0.75rem;
+    opacity: 0.5;
+}
+
+/* 2. Bottom Row Styling */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.85rem;
+}
+
+.bottom-left {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.soc2 {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #666;
+}
+
+.bottom-right {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.theme-toggles {
+    display: flex;
+    gap: 16px;
+    background: #0c0c0c;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.05);
+    cursor: pointer;
+}
+
+.language-picker {
+    cursor: pointer;
+}
+
